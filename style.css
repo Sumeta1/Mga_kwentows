@@ -3,7 +3,6 @@ body {
     padding: 0px;
     box-sizing: border-box;
     min-height: 100vh;
-    font-size: 15px;
     background: rgba(100,200,255,0.3);
 }
 
@@ -258,6 +257,7 @@ div#search {
             width: 80px;
             height: 20px;
             text-align: center;
+            font-size: 10px;
             background: rgba(0,0,0,0.5);
             border: 2px solid rgb(0, 170, 255);
         }
