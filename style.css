@@ -1,0 +1,373 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: rgba(100,200,255,0.3);
+}
+
+.intro {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    opacity: 1;
+    transition: 0.5s ease-in;
+    
+    > div:nth-child(1) {
+        background: rgb(100, 200, 255);
+        margin: 0;
+        box-sizing: border-box;
+        padding: 30px 30px 0px 30px;
+        display: block;
+        height: 100vh;
+        border-bottom: 3px solid black;
+        
+        h2 {
+            text-align: center;
+            font-family: cursive;
+            font-weight: 300px;
+            margin: 10px;
+        }
+        
+        h2:nth-child(1) {
+            color: white;
+            font-size: 50px;
+        }
+        
+        h2:nth-child(2) {
+            color: white;
+            font-size: 40px;
+        }
+        
+        #line {
+            margin-top: 100px;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+        }
+        
+        #text {
+            margin: 70px auto;
+            border: 1px solid white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: justify;
+            color: white;
+        }
+        
+        div#button {
+            display: block;
+            color: white;
+            position: fixed;
+            bottom: 15px;
+            height: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 10px 0px 10px;
+            text-align: center;
+            animation: updown 2s ease-in-out infinite;
+            
+            span {
+                background: white;
+                display: block;
+                height: 3px;
+                margin: 12px auto;
+                width: 60px;
+            }
+            
+            span:nth-child(1) {
+                transform: rotateZ(20deg) translateX(50%);
+                width: 32px;
+                position: relative;
+                top: 6px;
+                left: -1px;
+            }
+            
+            span:nth-child(2) {
+                transform: rotateZ(160deg) translateX(50%);
+                width: 32px;
+                position: relative;
+                top: -9px;
+            }
+        }
+    }
+    
+    > div:nth-child(2) {
+        display: block;
+        height: 80px;
+        width: 100%;
+        background: rgb(100,200, 255);
+        border-bottom-right-radius: 250px;
+        border-bottom-left-radius: 250px;
+        border-bottom: 3px solid black;
+    }
+}
+
+div#search {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: space-between;
+    border-radius: 50px;
+    border: 1px solid rgb(0, 170, 255);
+    background: none;
+    padding: 10px 20px 10px 20px;
+    height: 50px;
+    box-sizing: border-box;
+    transform: translateY(-200%);
+    transition: 1.2s cubic-bezier(0.445, 0.05, 0.05, 0.95);
+    
+    #input {
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        background: none;
+        padding: 10px;
+        height: 12px;
+        text-wrap: nowrap;
+        color: black;
+    }
+    
+    #but {
+        color: rgb(0, 170, 255);
+    }
+}
+
+.main {
+    
+    div[id*="-"] {
+        width: 70%;
+        text-align: justify;
+        text-indent: 20px;
+        margin: 50px auto;
+        line-height: 20px;
+        word-spacing: 5px;
+        border-radius: 20px;
+        padding: 20px;
+        border-top: 1px solid white;
+        border-bottom: 3px solid rgba(255,190,230,0.5);
+        background: rgb(222,222,246);
+        color: rgba(0,0,0,0.6);
+        
+        div {
+            display: flex;
+            margin: 0px 10px 20px 0px;
+            gap: 0.5em;
+            
+            span {
+                display: block;
+                width: 12px;
+                height: 12px;
+                background: var(--clr);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+#foot {
+    position: fixed;
+    bottom: 0px;
+    height: 150px;
+    width: 100%;
+    display: none;
+    align-content: center;
+    
+    #switch {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        position: relative;
+        left: 100%;
+        transform: translateX(-150%);
+        border-radius: 50px;
+        border: 2px solid rgb(0, 170, 255);
+        background-color: pink;
+        background-image: url(j.png);
+        background-size: 100%;
+        animation: bounce_switch 1s infinite ease;
+        animation-play-state: paused;
+        transition: 0.2s 0.0s ease;
+    }
+    
+    #add {
+        width: 50px;
+        height: 50px;
+        background: none;
+        border: 2px solid rgb(0,170,255);
+        border-radius: 50px;
+        position: relative;
+        left: 100%;
+        transform: translateX(-150%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        transition: 0.5s ease-in-out;
+        
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: rgb(0, 170, 255);
+            border-radius: 50px;
+            transition: 1s ease-out;
+        }
+        span:nth-child(2) {
+            transform: rotateZ(90deg);
+            width: 28px;
+        }
+        span:nth-child(1) {
+            transform: translateY(2px);
+        }
+    }
+    
+    #a-ui {
+        background: rgba(0,0,0,0);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+        visibility: hidden;
+        transition: background 0.5s ease-in-out;
+        
+        textarea {
+            width: 80%;
+            min-height: 150px;
+            display: block;
+            outline: none;
+            border-radius: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid rgb(0, 170, 255);
+        }
+        
+        div {
+            color: rgb(0, 170, 255);
+            padding: 10px;
+            border-radius: 20px;
+            width: 80px;
+            height: 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+            border: 2px solid rgb(0, 170, 255);
+        }
+    }
+}
+
+#note {
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 30px;
+    padding: 30px;
+    margin: 150px auto;
+    width: 270px;
+    color: rgba(0,0,0,0.7);
+    text-justify: justify;
+    text-indent: 20px;
+}
+
+@keyframes updown {
+    0% {
+        bottom: 15px;
+    }
+    15% {
+        bottom: 15px;
+    }
+    25% {
+        bottom: 40px;
+    }
+    35% {
+        bottom: 40px;
+    }
+    45% {
+        bottom: 15px;
+    }
+    65% {
+        bottom: 25px;
+    }
+    85% {
+        bottom: 15px;
+    }
+    100% {
+        bottom: 15px;
+    }
+}
+
+@keyframes bounce_switch {
+    0% {
+        top: 0%;
+    }
+    65% {
+        top: -100%;
+    }
+    70% {
+        top: -100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .intro {
+        background: green;
+        width: 100%;
+        
+        > div:nth-child(1) {
+            height: 100vw;
+            width: 100%;
+        }
+        
+        h2 {
+            transform: translateX(-30%) translateY(80%);
+        }
+        
+        #line {
+            transform: translateY(-1200%);
+        }
+        
+        #text {
+            transform: translateY(-150%) translateX(70%);
+            width: 250px;
+        }
+    }
+}
+
+.clicked {
+    .intro {
+        top: -110%;
+        opacity: 0;
+    }
+    #foot {
+        display: block;
+    }
+    #search {
+        transform: translateY(0%);
+    }
+}
+
+.addtext {
+    #foot #add {
+        background: black;
+        span:nth-child(1) {
+            transform: rotateZ(-405deg);
+        }
+        span:nth-child(2) {
+            transform: rotateZ(-495deg) translate(2px, 2px) ;
+        }
+        span {
+            transform: translate(2px, 2px);
+        }
+    }
+    #foot #a-ui {
+        background: rgba(0,0,0,0.5);
+    }
+}
